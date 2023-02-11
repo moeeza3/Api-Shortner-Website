@@ -1,38 +1,424 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+:root{
+  /* primary */
+  --cyan: hsl(180, 66%, 49%) !important;
+  --darkViolet: hsl(257, 27%, 26%) !important;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* secondary colors */
+  --red: hsl(0, 87%, 67%) !important;
+
+  /* neutral  colors*/
+  --gray: hsl(0, 0%, 75%) !important;
+  --grayishViolet: hsl(257, 7%, 63%) !important;
+  --veryDarkBlue: hsl(255, 11%, 22%) !important;
+  --veryDarkViolet: hsl(260, 8%, 14%) !important;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  font-family: 'Poppins', sans-serif;
+}
+header .header-nav .nav-link,header .login {
+     font-size: 16px !important;
+     font-weight: 700;
+     color: var(--grayishViolet);
+}
+header .signup{
+  background: var(--cyan);
   color: white;
+  font-size: 16px !important;
+     font-weight: 700;
+}
+header .header-nav .nav-link:hover{
+  color: var(--veryDarkBlue);
+}
+.signup:hover{
+  background: #9be3e2 !important;
+  color: #ffff !important;
+}
+.mobilemenubtn{
+  display: none !important;
+}
+/* hero------------- */
+
+
+.hero{
+  height: 90vh !important;
+  
+}
+.hero p{
+  font-size: 22px !important;
+  color: var(--grayishViolet);
+}
+.hero button{
+  background: var(--cyan);
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 12px 0;
+}
+/* .hero-img{
+  margin-right: -100px !important;
+   width: 100% !important;
+} */
+
+.shortner-container{
+  background: linear-gradient(#f0f1f6, #f0f1f6) no-repeat 0px 80px;
+ 
+}
+/* form ---------*/
+ 
+.form .form-container{
+  background-image: url('../public/images/bg-shorten-desktop.svg'), linear-gradient(to right, var(--veryDarkBlue), var(--darkViolet));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  /* background-color: rgba(43, 132, 209, 0.73) !important;
+  background-image: url('../public/images/bg-shorten-desktop.svg'); */
+}
+.form  .form-btn{
+   width: 100% !important;
+   background: var(--cyan) !important;
+   color: white !important;
+   font-weight: 700; 
+   
+}
+.error-border .username {
+   border: 2px solid var(--red) !important;
+    
+}
+input[type="button"]:hover,button:hover{
+     background: #9be3e2 !important;
+}
+.error-message{
+   color: var(--red) !important;
+   font-style: italic !important;
+   font-size: 14px !important;
+   letter-spacing: 1px !important;
+   position: absolute;
+   margin-top: 5px;
+}
+.short-data-container{
+  background: white;
+}
+.original-link,.short-link-txt{
+     font-weight: 500 !important;
+}
+.short-link-txt{
+  color: var(--cyan);
+
+}
+.short-data-container .default{
+  
+   background: var(--cyan);
+   color: white;
+   font-weight: 700; 
+}
+.short-data-container .activeBtnColor{
+  
+  background: rgb(26, 26, 26) !important;
+  color: white;
+  font-weight: 700; 
+}
+.stat .stat-line{
+  
+  color: var(--grayishViolet);
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.stat .card .card-body{
+   padding: 0 30px;
+   margin-top: 30px;
+}
+.stat .card .card-text{
+  font-size: 15px !important;
+  font-weight: 500;
+  color: var(--grayishViolet);
+}
+.stat{
+  position: relative !important;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.stat .card-container{
+  /* position: relative; */
+  /* height: 100vh !important; */
+  z-index: 10;
+}
+.stat .card{
+  
+  width: 350px !important;
+  height: 260px !important;
+  
+}
+
+
+
+.stat .second{
+ margin-top: 80px !important;
+
+
+}
+.stat .third{
+  margin-top: 160px !important;
+}
+.stat .second::before{
+  position: absolute;
+  content: "";
+  width:90px !important;
+  height: 8px !important;
+  top: 40%;
+  left: -35px;
+  z-index: -1;
+  background: var(--cyan) !important;
+
+}
+.stat .second::after{
+  position: absolute;
+  content: "";
+  width:90px !important;
+  height: 8px !important;
+  top: 40%;
+  right: -35px;
+  z-index: -1;
+  background: var(--cyan) !important;
+}
+.card-img-cont{
+    position: absolute;
+    top: -40px;
+    left: 25px;
+    height: 90px !important;
+    width: 90px !important;
+    background:var(--veryDarkBlue);
+}
+.card-img-cont img{
+  height: 40px !important;
+  width: 40px !important;
+}
+.banner{
+  background-image: url('../public/images/bg-boost-desktop.svg'),linear-gradient(to right, var(--darkViolet),var(--darkViolet));
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner h2{
+  color: white;
+  font-weight: 700;
+}
+.banner button{
+   color: white;
+   background: var(--cyan);  
+   font-weight: 700;
+   padding: 12px 0;
+}
+/* footer */
+.footer{
+  background: var(--veryDarkViolet);
+}
+.footer .logo,.footer  .disabled,.footer .icon .nav-link{
+  color: white !important;
+/*  background: white !important; */
+}
+.footer .nav .nav-link{
+  color: var(--grayishViolet);
+  font-size: 16px !important;
+}
+/* .footer .nav-link{
+  padding-left: 0 !important;
+} */
+button:hover{
+  background: #9be3e2 !important;
+  color: #ffffff !important;
+}
+
+.footer .nav-link:hover{
+  color: var(--cyan);
+}
+.footer .icon .nav-link{
+  font-size: 22px !important;
+}
+.footer .icon .nav-link:hover{
+  color: var(--cyan) !important;
+}
+@media only screen and (max-width: 1200px) {
+  
+  .stat .card{
+     
+    width: 290px !important;
+    height: 270px !important;
+    
   }
-  to {
-    transform: rotate(360deg);
+  
+  
+}
+
+.hr{
+  display: none !important;
+}
+@media only screen and (max-width: 992px) {
+  body{
+    overflow-x: hidden !important;
   }
+  .navbar {
+    position: relative;
+  }
+  .navbar-container{
+    position: absolute;
+    top:100%;
+    right: 10px;
+    width: 400px !important;
+    height: 400px !important;
+  }
+  .default .navbar-container{
+    display: none !important;
+    
+  }
+  .default .navbar-container .nav{
+    display: none !important;
+  }
+  /* .default .nav{
+    display: none !important;
+  } */
+  .activatemenu .navbar-container{
+    display: block !important;
+    
+  } 
+  
+  .navbar-container {
+    text-align: center !important;
+    border-radius: 10px !important;
+    background: var(--veryDarkBlue);
+    -webkit-border-radius: 10px !important;
+    -moz-border-radius: 10px !important;
+    -ms-border-radius: 10px !important;
+    -o-border-radius: 10px !important;
+}
+   .navbar-container .nav .nav-link{
+    color: #ededed !important;
+    font-size: 20px !important;
+   }
+   .hr{
+    display: block !important;
+    color: #ffffff ;
+  }
+  .mobilemenubtn{
+    display: block !important;
+  }
+  .mobilemenubtn:hover{
+    color: var(--veryDarkBlue) !important;
+    background: transparent !important;
+  }
+  .hero{
+    height: 140vh !important;
+    
+ }
+ .hero-img{
+  width: 100% !important;
+   
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+ }
+ .short-link{
+   width: 100% !important;
+ }
+ .stat .card{
+     
+  width: 450px !important;
+  height: 250px !important;
+  
+}
+.stat .second::before{
+  position: absolute;
+  content: "";
+  width:8px !important;
+  height: 90px !important;
+  top: -40%;
+  left: 47.5%;
+  z-index: -1;
+  background: var(--cyan) !important;
+
+}
+.stat .second::after{
+  position: absolute;
+  content: "";
+  width:8px !important;
+  height: 90px !important;
+  top: 100%;
+ 
+  right: 51.5%;
+  z-index: -1;
+  background: var(--cyan) !important;
+}
+.stat .second{
+  margin-top: 80px !important;
+ 
+ 
+ }
+  
+ .stat .third{
+  margin-top: 80px !important;
+}
+
+.card-img-cont{
+  
+  top: -40px;
+  left: 38%;
+  
+}
+
+
+  
+}
+
+@media only screen and (max-width: 576px) {
+  
+  .stat .card{
+     
+    width: 450px !important;
+    height: 270px !important;
+    
+  }
+  /* .navbar-container{
+    right: 90px !important;
+  } */
+  
+}
+
+@media only screen and (max-width: 476px) {
+  
+  .stat .card{
+     
+    width: 380px !important;
+    height: 270px !important;
+    
+  }
+  .navbar-container{
+    width: 350px !important;
+    
+  }
+  
+  
+}
+
+@media only screen and (max-width: 376px) {
+  
+  .stat .card{
+     
+    width: 350px !important;
+    height: 270px !important;
+    
+  }
+  .navbar-container{
+    width: 320px !important;
+    right: 12px !important; 
+  }
+  
+  
 }
